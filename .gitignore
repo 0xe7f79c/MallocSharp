@@ -1,0 +1,25 @@
+# Build directories
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# C++ compiled objects and binaries
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.lib
+*.a
+*.dll
+*.so
+*.dylib
+
+# Sublime Text
+*.sublime-workspace
+
+# OS specific
+.DS_Store
+Thumbs.db
