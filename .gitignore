@@ -4,6 +4,7 @@ bin/
 obj/
 Debug/
 Release/
+vcpkg_installed/
 
 # C++ compiled objects and binaries
 *.o
@@ -23,3 +24,12 @@ Release/
 # OS specific
 .DS_Store
 Thumbs.db
+
+# local VS settings
+.vs/
+
+# don't include CMakeUserPresets.json where we define local path to vcpkg installation
+CMakeUserPresets.json
+
+# do not include the token for the bot
+token
