@@ -17,7 +17,7 @@ ms::maybe<std::string> read_file(std::string_view path) {
 		err += b_err;
 		err += path.data();
 		err += '\"';
-		return err;
+		return std::unexpected(err);
 	}
 	std::string f_s;
 
