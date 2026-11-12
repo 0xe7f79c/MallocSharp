@@ -12,11 +12,11 @@ ms::maybe<std::string> read_file(std::string_view path) {
 	std::FILE* fp = std::fopen(path.data(), "rb");
 	if(!fp) {
 		constexpr char b_err[] = "cannot open file \"";
-		std::string err;
-		err.reserve(sizeof(b_err) + std::strlen(path.data()) + 1);
-		err += b_err;
-		err += path.data();
-		err += '\"';
+		ms::error err;
+		err.w.reserve(sizeof(b_err) + std::strlen(path.data()) + 1);
+		err.w += b_err;
+		err.w += path.data();
+		err.w += '\"';
 		return std::unexpected(err);
 	}
 	std::string f_s;
